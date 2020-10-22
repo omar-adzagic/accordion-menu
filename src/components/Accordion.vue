@@ -11,9 +11,7 @@
                 </li>
             </ul>
             <div class="add-new-item">
-                <input type="text"
-                       v-model="newCitrus"
-                       placeholder="Enter value">
+                <input type="text" v-model="newCitrus" placeholder="Enter value">
                 <button @click="addItem">Add new</button>
             </div>
         </div>
@@ -22,7 +20,7 @@
 
 <script>
     export default {
-        name: 'HelloWorld',
+        name: 'Accordion',
         props: {
             msg: String
         },
