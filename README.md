@@ -1,4 +1,4 @@
-# untitled
+# Accordion menu
 
 ## Project setup
 ```
