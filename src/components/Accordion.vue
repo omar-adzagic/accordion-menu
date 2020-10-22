@@ -12,7 +12,7 @@
             </ul>
             <div class="add-new-item">
                 <input type="text"
-                       v-model="input"
+                       v-model="newCitrus"
                        placeholder="Enter value">
                 <button @click="addItem">Add new</button>
             </div>
@@ -28,9 +28,7 @@
         },
         data() {
             return {
-                test: 'cao',
-                color: '#fff',
-                input: '',
+                newCitrus: '',
                 citruses: [
                     { id: 1, name: 'orange', isActive: false },
                     { id: 2, name: 'lemon', isActive: false },
@@ -50,13 +48,13 @@
                 citrus.isActive = citrus.isActive == true ? false : true;
             },
             addItem() {
-                if (this.input != '') {
-                    const newCitrus = {
-                        name: this.input,
+                if (this.newCitrus != '') {
+                    const newCitrusObject = {
+                        name: this.newCitrus,
                         isActive: false
                     };
-                    this.citruses.push(newCitrus);
-                    this.input = '';
+                    this.citruses.push(newCitrusObject);
+                    this.newCitrus = '';
                 }
             },
             removeItem(citrus) {
